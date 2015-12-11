@@ -10,7 +10,7 @@ export const standard = (req, res, next) => res.sendFile(
 
 export const grievance = (req, res, next) => res
   .send(template(Object.assign(req.query, {
-    url: `/grievance.jpg${req.originalUrl.slice(10)}`
+    url: `http://getfestivus.com/grievance.png${req.originalUrl.slice(10)}`
   })));
 
 const base64Data = data => data.replace(/^data:image\/png;base64,/, '');
