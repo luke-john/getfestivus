@@ -1,5 +1,6 @@
 import React from 'react';
-import {Grid, PageHeader, Row, Col} from 'react-bootstrap';
+import {Grid, PageHeader, Row, Col, Button} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
 
 import GrievanceDisplay from 'components/GrievanceDisplay/index.jsx';
 import ShareGrievance from 'components/ShareGrievance/index.jsx';
@@ -25,6 +26,12 @@ export default class Grievance extends React.Component {
             <ShareGrievance
               grievance={grievance}
               qualifier={qualifier} />
+            <br />
+            <LinkContainer to='/air-grievance'>
+              <Button bsSize={'xs'}>
+                Share your own grievance
+              </Button>
+            </LinkContainer>
           </Col>
         </Row>
       </Grid>
